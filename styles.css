@@ -122,17 +122,29 @@ body {
 .aptitudesCards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 
-.hardSkills,
-.softSkills {
+.backend,
+.frontend,
+.devops {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    max-width: 30%;
     margin-top: 15px;
-    width: 45%;
     border: .5px solid rgba(85, 85, 85, 0.58);
     border-radius: 8px;
     padding: 15px;
+}
+
+ul,
+li {
+    color: rgb(114, 114, 114);
+    padding: 5px;
+    padding-left: 20px;
 }
 
 .proyectos.visible {
