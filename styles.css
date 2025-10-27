@@ -5,6 +5,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     color: white;
     font-size: 5rem;
@@ -59,7 +63,11 @@ body {
     align-items: center;
 }
 
-.mainNavbar {
+#mainNavbar {
+
+    transform: translateY(0);
+    /* baja para mostrarse */
+    transition: transform 1s ease;
     backdrop-filter: blur(10px);
     width: 100vw;
     position: sticky;
@@ -68,7 +76,21 @@ body {
     flex-direction: row;
     justify-content: end;
     z-index: 1000;
+}
 
+#mainNavbar.navbarVisible {
+    transform: translateY(-100%);
+    /* empieza oculto arriba */
+    transition: transform 1s ease;
+    /* transiciona solo la transformacion */
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    z-index: 1000;
 }
 
 .enlaces {
@@ -78,7 +100,7 @@ body {
     gap: 15px;
 }
 
-.mainNavbar a {
+#mainNavbar a {
     padding: 10px;
     color: white;
     text-decoration: none;
@@ -104,11 +126,11 @@ body {
         flex-direction: column;
     }
 
-    .mainNavbar {
+    #mainNavbar {
         justify-content: center;
     }
 
-    .mainNavbar .enlaces {
+    #mainNavbar .enlaces {
         flex-direction: column;
     }
 }
@@ -173,7 +195,7 @@ body {
     border: .5px solid #353535;
     border-radius: 8px;
     padding: 25px;
-    transition: border-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 
