@@ -59,7 +59,37 @@ body {
     align-items: center;
 }
 
+.mainNavbar {
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    z-index: 1000;
+
+}
+
+.enlaces {
+    padding: 15px;
+    padding-right: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.mainNavbar a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+
 .mainHeader {
+    /* background-color: green; */
+    margin-top: -50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -71,6 +101,14 @@ body {
 
 @media (max-width: 768px) {
     .mainHeader {
+        flex-direction: column;
+    }
+
+    .mainNavbar {
+        justify-content: center;
+    }
+
+    .mainNavbar .enlaces {
         flex-direction: column;
     }
 }
@@ -96,13 +134,16 @@ body {
     font-weight: 600;
     cursor: pointer;
     border-radius: 8px;
+    font-size: 1.1rem;
 
 }
 
-.formacion,
-.aptitudes,
-.proyectos {
+#formacion,
+#aptitudes,
+#proyectos {
     opacity: 0;
+    height: 100vh;
+    padding-top: 100px;
 }
 
 .mainContent {
@@ -115,13 +156,11 @@ body {
     gap: 50px;
 }
 
-.formacion.visible {
+#formacion.visible,
+#aptitudes.visible,
+#proyectos.visible {
     opacity: 1;
     transition: opacity 3s ease-in;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .ciclo {
@@ -150,11 +189,6 @@ body {
 .cicloFecha {
     font-size: 1rem;
     color: rgb(140, 140, 140);
-}
-
-.aptitudes.visible {
-    opacity: 1;
-    transition: opacity 3s ease-in;
 }
 
 .aptitudesCards {
@@ -192,14 +226,14 @@ ul {
     margin-left: 20px;
 }
 
-li {
+.aptitudCardElement {
     padding: 8px 0;
     position: relative;
     color: rgb(200, 200, 200);
     font-size: 0.95rem;
 }
 
-li::before {
+.aptitudCardElement::before {
     content: '✔';
     /* o puedes usar FontAwesome */
     color: #2f8019;
@@ -207,12 +241,6 @@ li::before {
     position: absolute;
     left: -20px;
     font-size: 1rem;
-}
-
-
-.proyectos.visible {
-    opacity: 1;
-    transition: opacity 3s ease-in;
 }
 
 footer {
