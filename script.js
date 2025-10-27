@@ -6,8 +6,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const aptitudes = document.getElementsByClassName("aptitudes")[0];
 const formacion = document.getElementsByClassName("formacion")[0];
+const aptitudes = document.getElementsByClassName("aptitudes")[0];
+const proyectos = document.getElementsByClassName("proyectos")[0];
 
-observer.observe(aptitudes);
 observer.observe(formacion);
+observer.observe(aptitudes);
+observer.observe(proyectos);
