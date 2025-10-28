@@ -11,13 +11,13 @@ html {
 
 h1 {
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
 }
 
 h2 {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
@@ -159,6 +159,10 @@ body {
 
     #mainNavbar .enlaces {
         flex-direction: column;
+    }
+
+    h1 {
+        font-size: 3rem;
     }
 }
 
