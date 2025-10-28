@@ -1,0 +1,44 @@
+{
+    "proyectos": [
+        {
+            "titulo": "PhotoRally",
+            "descripcion": "Aplicación móvil para concursos fotográficos desarrollada con React Native, Firebase y Cloudinary. Permite a los usuarios subir fotos, votar y competir en rankings.",
+            "tecnologias": [
+                "React Native",
+                "Firebase",
+                "Cloudinary"
+            ],
+            "github": "https://github.com/tuusuario/PhotoRally"
+        },
+        {
+            "titulo": "BeJob Courses",
+            "descripcion": "Plataforma web similar a Udemy, donde los usuarios pueden realizar cursos interactivos. Backend desarrollado con Spring Boot y frontend con React.",
+            "tecnologias": [
+                "JavaScript",
+                "Spring Boot",
+                "MySQL"
+            ],
+            "github": "https://github.com/tuusuario/BeJob-Courses"
+        },
+        {
+            "titulo": "ShopEase",
+            "descripcion": "Carrito de compras online creado con PHP y MySQL. Permite a los usuarios registrarse, agregar productos al carrito y realizar compras simuladas.",
+            "tecnologias": [
+                "PHP",
+                "MySQL",
+                "Bootstrap"
+            ],
+            "github": "https://github.com/tuusuario/ShopEase"
+        },
+        {
+            "titulo": "BattleShips Online",
+            "descripcion": "Juego multijugador de 'Hundir la flota' desarrollado en Java usando sockets. Los jugadores pueden desafiarse en tiempo real a través de una red local.",
+            "tecnologias": [
+                "Java",
+                "Sockets",
+                "Swing"
+            ],
+            "github": "https://github.com/tuusuario/BattleShips-Online"
+        }
+    ]
+}
