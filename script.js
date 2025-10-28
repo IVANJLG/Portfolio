@@ -29,7 +29,6 @@ window.addEventListener("scroll", () => {
 observer.observe(formacion);
 observer.observe(aptitudes);
 observer.observe(proyectos);
-observer.observe(contacto);
 
 const cargarProyectos = async () => {
     const InfoProyectos = fetch("./proyectos.json").then((response) => {
@@ -90,4 +89,6 @@ const cargarProyectos = async () => {
 
 //cargar los datos de los proyectos de proyectos.json
 window.addEventListener("load", cargarProyectos);
+
+
 
