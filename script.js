@@ -43,18 +43,30 @@ const cargarProyectos = async () => {
         for (let i = 0; i < data.proyectos.length; i++) {
             var nuevaSeccion = document.createElement("section");
             nuevaSeccion.classList.add("proyecto");
+
             //asignamos el titulo
             var tituloProyecto = document.createElement("h4");
             tituloProyecto.innerHTML = data.proyectos[i].titulo;
-            nuevaSeccion.appendChild(tituloProyecto);
+            // nuevaSeccion.appendChild(tituloProyecto);
 
+            var enlace = document.createElement("a");
+            enlace.setAttribute("href", data.proyectos[i].enlace);
+            //hace que el enlace se abra en otra pagina y no permita acceder 
+            // desde el a la pagina original
+            enlace.setAttribute("target", "_blank");
+            enlace.setAttribute("rel", "noopener noreferrer");
+
+            enlace.appendChild(tituloProyecto);
+            nuevaSeccion.appendChild(enlace);
+
+            //asignamos la descripcion
             var descripcionProyecto = document.createElement("p");
             descripcionProyecto.innerHTML = data.proyectos[i].descripcion;
             nuevaSeccion.appendChild(descripcionProyecto);
 
+            //asignamos las tecnologias
             var tecnologiasProyecto = document.createElement("p");
             tecnologiasProyecto.classList.add("tecnologias");
-
             var tecnologias = "";
             for (let j = 0; j < data.proyectos[i].tecnologias.length; j++) {
                 tecnologias += data.proyectos[i].tecnologias[j];
@@ -63,9 +75,7 @@ const cargarProyectos = async () => {
                     tecnologias += ", ";
                 }
             }
-
             tecnologiasProyecto.innerHTML = '<i class="fa-solid fa-code"></i> ' + tecnologias;
-
             nuevaSeccion.appendChild(tecnologiasProyecto);
 
             //añadimos el proyecto a la lista

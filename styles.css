@@ -315,6 +315,12 @@ ul {
     padding: 15px;
 }
 
+.proyecto a:hover {
+    color: #00a8cc;
+    text-decoration: underline;
+}
+
+
 .proyecto:hover {
     transform: scale(102%);
     box-shadow: 0px 0px 3px white;
