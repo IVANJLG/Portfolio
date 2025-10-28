@@ -178,7 +178,6 @@ body {
 }
 
 .contactButton {
-    margin: 60px auto;
     width: 230px;
     height: 60px;
     border: .75px solid white;
@@ -194,7 +193,8 @@ body {
 
 #formacion,
 #aptitudes,
-#proyectos {
+#proyectos,
+#contacto {
     opacity: 0;
     min-height: 100vh;
     padding-top: 100px;
@@ -212,7 +212,8 @@ body {
 
 #formacion.visible,
 #aptitudes.visible,
-#proyectos.visible {
+#proyectos.visible,
+#contacto.visible {
     opacity: 1;
     transition: opacity 3s ease-in;
 }
@@ -260,6 +261,11 @@ body {
     background-color: #121213;
 }
 
+.ciclo:hover {
+    transform: scale(105%);
+    box-shadow: 0 0 2px white;
+}
+
 
 .cicloInfo h4 {
     font-size: 1.3rem;
@@ -283,6 +289,7 @@ body {
     justify-content: center;
 }
 
+
 .backend,
 .frontend,
 .devops {
@@ -304,6 +311,13 @@ body {
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(114, 114, 114, 0.3);
     padding-bottom: 5px;
+}
+
+.backend:hover,
+.frontend:hover,
+.devops:hover {
+    transform: scale(105%);
+    box-shadow: 0 0 2px white;
 }
 
 ul {
@@ -347,6 +361,7 @@ ul {
     border: 1px solid rgba(114, 114, 114, 0.3);
     background-color: #121213;
     padding: 15px;
+    transition: transform 0.3s ease;
 }
 
 .proyecto a:hover {
@@ -356,13 +371,45 @@ ul {
 
 
 .proyecto:hover {
-    transform: scale(102%);
+    transform: scale(105%);
     box-shadow: 0px 0px 3px white;
 }
 
 .tecnologias {
     color: rgb(200, 200, 200);
     font-style: oblique;
+}
+
+#contacto {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1;
+    max-width: 550px;
+    width: 100%;
+}
+
+#contactForm {
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.contactInput {
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: #0a0a0b;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    height: 250px;
 }
 
 footer {

@@ -16,7 +16,6 @@
                 <a href="#formacion">Mis estudios</a>
                 <a href="#aptitudes">Tecnologías</a>
                 <a href="#proyectos">Mis proyectos</a>
-                <a href="#">Contacto</a>
             </section>
         </nav>
         <header class="mainHeader">
@@ -27,7 +26,8 @@
                     dentro del mundo del desarrollo. Si te interesa lo que ves, por favor, ¡mira mis otros proyectos!
                 </p>
             </section>
-            <button class="contactButton">Contacta conmigo <i class="fa-solid fa-arrow-right"></i></button>
+            <a href="#contacto"><button class="contactButton">Contacta conmigo <i
+                        class="fa-solid fa-arrow-right"></i></button></a>
 
         </header>
 
@@ -95,7 +95,15 @@
                 <section class="infoProyectos">
                 </section>
             </section>
-
+            <section id="contacto">
+                <h3>Ponte en contacto conmigo</h3>
+                <form id="contactForm" method="post">
+                    <input type="email" name="correo" class="contactInput" placeholder="Correo" required>
+                    <input type="text" name="asunto" class="contactInput" placeholder="Asunto del correo" required>
+                    <textarea name=" mensaje" class="contactInput" placeholder="Mensaje" required></textarea>
+                    <button type="submit" class="contactButton">Enviar</button>
+                </form>
+            </section>
         </section>
 
         <footer>

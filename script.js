@@ -9,6 +9,7 @@ const observer = new IntersectionObserver((entries) => {
 const formacion = document.getElementById("formacion");
 const aptitudes = document.getElementById("aptitudes");
 const proyectos = document.getElementById("proyectos");
+const contacto = document.getElementById("contacto");
 const navbar = document.getElementById("mainNavbar");
 
 let lastScrollPosition = 0;
@@ -28,6 +29,7 @@ window.addEventListener("scroll", () => {
 observer.observe(formacion);
 observer.observe(aptitudes);
 observer.observe(proyectos);
+observer.observe(contacto);
 
 const cargarProyectos = async () => {
     const InfoProyectos = fetch("./proyectos.json").then((response) => {
