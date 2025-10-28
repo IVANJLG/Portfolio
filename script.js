@@ -18,9 +18,9 @@ window.addEventListener("scroll", () => {
 
     //si aumenta el numero el menu nav se esconde y si disminuye se muestra
     if (window.scrollY > lastScrollPosition) {
-        navbar.classList.add("navbarVisible");
-    } else {
         navbar.classList.remove("navbarVisible");
+    } else {
+        navbar.classList.add("navbarVisible");
     }
     lastScrollPosition = window.scrollY;
 });
